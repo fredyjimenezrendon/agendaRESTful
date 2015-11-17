@@ -20,27 +20,27 @@ public class PersonasControlador {
     @Autowired
     private PersonaServicio personaServicio;
 
-    @RequestMapping(value = "/obtener", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Persona> obtenerTodas() {
         return personaServicio.obtenerTodasLasPersonas();
     }
     
-    @RequestMapping(value = "/obtener/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Persona obtener(@PathVariable("id") Long id) {
        return personaServicio.obtenerPersona(id);
     }
 
-    @RequestMapping(value = "/agregar", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void agregar(@RequestBody Persona persona) {
         personaServicio.agregarPersona(persona);
     }
 
-    @RequestMapping(value = "/actualizar", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void actualizar(@RequestBody Persona persona) {
         personaServicio.actualizarPersona(persona);
     }
 
-    @RequestMapping(value = "/remover/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void remover(@PathVariable("id") Long id) {
         personaServicio.borrarPersona(id);
     }
