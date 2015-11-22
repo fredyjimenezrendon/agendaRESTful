@@ -20,7 +20,7 @@ public class PersonasControlador {
     @Autowired
     private PersonaServicio personaServicio;
 
-    @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Persona> obtenerTodas() {
         return personaServicio.obtenerTodasLasPersonas();
     }

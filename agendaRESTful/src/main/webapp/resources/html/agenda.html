@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Agenda</title>
+</head>
+<body>
+<table id="registros" border="1"></table>
+<input type="button" id="crear" value="crear">
+
+<div id="dialog-form" title="Crear nueva persona" style="display: none">
+  <p class="validateTips">Todos los campos son obligatorios.</p>
+  <form>
+    <fieldset>
+      <label for="nombres">Nombres</label>
+      <input type="text" id="nombres">
+      <label for="apellidos">Apellidos</label>
+      <input type="text" id="apellidos">
+      <label for="telefono">Telefono</label>
+      <input type="text" id="telefono">
+      <input type="hidden" id="id" value="">
+    </fieldset>
+  </form>
+</div>
+
+</body>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="../js/agenda.js"></script>
+</html>
