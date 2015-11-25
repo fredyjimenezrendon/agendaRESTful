@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
-	url = 'http://localhost:8888/agendaRESTful/personas/';
-	home = 'http://localhost:8888/agendaRESTful/resources/html/agenda.html';
+	url = 'http://localhost:7779/agendaRESTful/personas/';
+	home = 'http://localhost:7779/agendaRESTful/resources/html/agenda.html';
 	dialog = $( "#dialog-form" ).dialog({
 	      autoOpen: false,
 	      height: 400,
